@@ -1,0 +1,72 @@
+{
+ "alert_statuses": [
+  "Received"
+ ],
+ "basis": "MY-AISafe overview (E12 AI Trust Function); AIGE 2024; ISO/IEC 5338:2023",
+ "cadence": "every 3 hours",
+ "channel": [
+  "push",
+  "dashboard"
+ ],
+ "classification": {
+  "Critical": "Confirmed harm or loss of control; assess within 3 h",
+  "High": "Serious enforcement, litigation, binding law affecting Malaysia, major misuse campaign, or any threat/incident in MY/ASEAN; assess within 24 h",
+  "Low": "Background trend; monthly review",
+  "Medium": "Notable policy, research or near-miss signal; assess within 1 week"
+ },
+ "keywords": [
+  "Malaysia",
+  "ASEAN",
+  "PDPA",
+  "deepfake",
+  "data breach",
+  "rogue agent",
+  "sandbox escape",
+  "safety monitoring",
+  "AI Act",
+  "AI law"
+ ],
+ "kinds": [
+  "incident",
+  "near-miss",
+  "threat"
+ ],
+ "lifecycle": [
+  "Inception",
+  "Design & development",
+  "Verification & validation",
+  "Deployment",
+  "Operation & monitoring",
+  "Continuous validation",
+  "Re-evaluation",
+  "Retirement"
+ ],
+ "min_severity": "High",
+ "principles": [
+  "Fairness",
+  "Reliability, Safety & Control",
+  "Privacy & Security",
+  "Inclusiveness",
+  "Transparency",
+  "Accountability",
+  "Human Benefit & Happiness"
+ ],
+ "region_boost": [
+  "Malaysia",
+  "ASEAN",
+  "Singapore",
+  "Indonesia",
+  "Thailand",
+  "Philippines",
+  "Vietnam",
+  "Brunei"
+ ],
+ "stages": [
+  "Received",
+  "Assessed",
+  "Contained",
+  "Shared"
+ ],
+ "timezone": "Asia/Kuala_Lumpur",
+ "updated_at": "2026-10-26T06:00:00Z"
+}

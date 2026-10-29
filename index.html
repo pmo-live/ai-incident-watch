@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AI Incident Watch · Malaysia</title>
+<meta name="description" content="Public live channel of the Malaysia AI Safety Institute (MY-AISafe) for AI incidents, near-misses and emerging threats. Updated every 3 hours.">
+<meta property="og:title" content="AI Incident Watch · Malaysia">
+<meta property="og:description" content="Live AI incident and threat monitoring for Malaysia. Report an AI incident or near-miss.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230d6e8a'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+<div class="wrap">
+  <header class="bar">
+    <div class="brand">
+      <span class="org" data-i18n="org">Malaysia AI Safety Institute (MY-AISafe) · AI Malaysia</span>
+      <a href="index.html">AI Incident Watch</a>
+    </div>
+    <nav class="main" aria-label="Main">
+      <a class="btn ghost" href="#s-threats" data-i18n="nav_threats">Threat intelligence</a>
+      <a class="btn ghost" href="#s-about" data-i18n="nav_about">About</a>
+      <a class="btn primary" href="report.html" data-i18n="nav_report">Report an incident</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="ms" aria-pressed="false">BM</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+  <div class="top">
+    <div>
+      <div class="eyebrow" data-i18n="eyebrow">E12 AI Trust Function · Incident Monitoring &amp; Forensics</div>
+      <h1 data-i18n="h1">Live AI incident and threat channel</h1>
+      <p class="sub" data-i18n="sub">Public view of AI incidents, near-misses and emerging threats relevant to Malaysia. A scanner checks sources every 3 hours; MY-AISafe officers assess and contain. Anyone can report an incident.</p>
+    </div>
+    <div class="status" aria-live="polite">
+      <span class="pill off" id="pill-scan"><span class="dot"></span><span><span data-i18n="last_scan">Last scan</span>: <span class="mono" id="last-scan">…</span></span></span>
+      <span class="pill off" id="pill-next"><span class="dot"></span><span><span data-i18n="next_scan">Next scan</span>: <span class="mono" id="next-scan">…</span></span></span>
+      <span class="pill" id="pill-live"><span class="dot"></span><span id="live-text">Loading</span></span>
+    </div>
+  </div>
+
+  <div class="alert" id="alert" role="status" aria-live="polite">
+    <span class="sev" aria-hidden="true"></span>
+    <div><strong id="alert-title">Early warning</strong><small id="alert-sub"></small></div>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi"><div class="eyebrow" data-i18n="k_open">Open incidents</div><div class="n" id="k-open">–</div><div class="foot" data-i18n="k_open_f">Received, assessed or contained</div></div>
+    <div class="kpi"><div class="eyebrow" data-i18n="k_near">Near-misses</div><div class="n" id="k-near">–</div><div class="foot" data-i18n="k_near_f">Caught before harm</div></div>
+    <div class="kpi"><div class="eyebrow" data-i18n="k_threat">Active threats</div><div class="n acc" id="k-threat">–</div><div class="foot" data-i18n="k_threat_f">Emerging risks and misuse patterns</div></div>
+    <div class="kpi"><div class="eyebrow" data-i18n="k_sev">Critical / High</div><div class="n crit" id="k-sev">–</div><div class="foot" data-i18n="k_sev_f">Open items at early-warning level</div></div>
+    <div class="kpi"><div class="eyebrow" data-i18n="k_my">Malaysia / ASEAN</div><div class="n" id="k-my">–</div><div class="foot" data-i18n="k_my_f">Open items in the region</div></div>
+    <div class="kpi"><div class="eyebrow" data-i18n="k_shared">Lessons shared</div><div class="n ok" id="k-shared">–</div><div class="foot" data-i18n="k_shared_f">Closed with learnings published</div></div>
+  </div>
+
+  <div class="grid">
+    <div class="col">
+      <section class="panel" id="s-incidents" aria-labelledby="h-inc">
+        <header>
+          <h2 id="h-inc" data-i18n="inc_h">Incidents and near-misses</h2>
+          <div class="filters">
+            <label for="f-init">Initiative</label>
+            <select id="f-init"><option value="" data-i18n="f_all_init">All initiatives</option><option>AI Governance</option><option>AI Cities</option><option>AI Safety</option></select>
+            <label for="f-sev">Severity</label>
+            <select id="f-sev"><option value="" data-i18n="f_all_sev">All severities</option><option>Critical</option><option>High</option><option>Medium</option><option>Low</option></select>
+            <label for="f-status">Stage</label>
+            <select id="f-status"><option value="open" data-i18n="f_open">Open only</option><option value="" data-i18n="f_all_st">All stages</option><option>Received</option><option>Assessed</option><option>Contained</option><option>Shared</option></select>
+            <label for="f-q">Search</label>
+            <input id="f-q" type="search" placeholder="Search" data-i18n-ph="search">
+          </div>
+          <div class="desc" data-i18n="inc_d">After release: receive, assess and contain AI incidents and near-misses, then share what was learned. Stage bars show how far each item has moved.</div>
+        </header>
+        <div class="body"><div class="feed" id="feed"><div class="empty"><b data-i18n="empty_h">Loading</b></div></div></div>
+        <div class="cta">
+          <p data-i18n="cta_p">Seen an AI system cause harm, behave unsafely, or nearly do so? Developers, deployers, agencies and the public can report it here. Near-misses count.</p>
+          <a class="btn primary" href="report.html" data-i18n="nav_report">Report an incident</a>
+        </div>
+      </section>
+
+      <section class="panel" id="s-threats" aria-labelledby="h-thr">
+        <header>
+          <h2 id="h-thr" data-i18n="thr_h">Threat intelligence</h2>
+          <span class="eyebrow" data-i18n="thr_e">Early warning</span>
+          <div class="desc" data-i18n="thr_d">Emerging AI risks and misuse patterns tracked so that warning can be given before they spread. These are not yet confirmed incidents in Malaysia.</div>
+        </header>
+        <div class="body"><div class="feed" id="threats"></div></div>
+      </section>
+
+      <section class="panel" id="s-about" aria-labelledby="h-about">
+        <header><h2 id="h-about" data-i18n="about_h">How this channel works</h2></header>
+        <div class="body">
+          <div class="rule"><span class="k" data-i18n="a_detect">Detect</span><span data-i18n="a_detect_d">A scanner agent searches public sources every 3 hours for AI incidents, near-misses and threat patterns. Every item carries its event date and source link.</span></div>
+          <div class="rule"><span class="k" data-i18n="a_receive">Receive</span><span data-i18n="a_receive_d">Reports from the public, developers, deployers and agencies enter the same pipeline through the report form.</span></div>
+          <div class="rule"><span class="k" data-i18n="a_assess">Assess</span><span data-i18n="a_assess_d">MY-AISafe officers classify severity, identify the AIGE principles affected and the lifecycle stage of the system, and record the root cause.</span></div>
+          <div class="rule"><span class="k" data-i18n="a_contain">Contain</span><span data-i18n="a_contain_d">Containment actions are coordinated with the responsible developer, deployer or sector lead.</span></div>
+          <div class="rule"><span class="k" data-i18n="a_share">Share</span><span data-i18n="a_share_d">Lessons learned are published on closed items so the ecosystem can act on them.</span></div>
+          <div class="rule"><span class="k" data-i18n="a_basis">Basis</span><span data-i18n="a_basis_d">National AI Action Plan 2026–2030 initiative E12 (AI Trust Function); National Guidelines on AI Governance and Ethics (AIGE, 2024); ISO/IEC 5338:2023 AI lifecycle.</span></div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="col">
+      <section class="panel" aria-labelledby="h-pipe">
+        <header><h2 id="h-pipe" data-i18n="pipe_h">Pipeline</h2><span class="eyebrow">Receive → Assess → Contain → Share</span></header>
+        <div class="body"><div class="pipe" id="pipe"></div></div>
+      </section>
+      <section class="panel" aria-labelledby="h-prin">
+        <header><h2 id="h-prin" data-i18n="prin_h">AIGE principles affected</h2><span class="eyebrow" data-i18n="prin_e">Open items</span></header>
+        <div class="body"><div class="bars" id="prin-bars"></div></div>
+      </section>
+      <section class="panel" aria-labelledby="h-cls">
+        <header><h2 id="h-cls" data-i18n="cls_h">Severity levels</h2></header>
+        <div class="body"><table class="cls" id="cls"><thead><tr><th data-i18n="cls_l">Level</th><th data-i18n="cls_d">Meaning</th><th data-i18n="cls_r">Response</th></tr></thead><tbody></tbody></table></div>
+      </section>
+      <section class="panel" aria-labelledby="h-inits">
+        <header><h2 id="h-inits" data-i18n="init_h">Initiatives</h2><span class="eyebrow">AI Malaysia</span></header>
+        <div class="body"><div class="inits" id="inits"></div></div>
+      </section>
+      <section class="panel" aria-labelledby="h-scan">
+        <header><h2 id="h-scan" data-i18n="scan_h">Scanner runs</h2><span class="eyebrow" data-i18n="scan_e">Last 10</span></header>
+        <div class="body"><ul class="scanlist" id="scans"></ul></div>
+      </section>
+      <section class="panel" aria-labelledby="h-tl">
+        <header><h2 id="h-tl" data-i18n="tl_h">From principles to institute</h2></header>
+        <div class="body"><ul class="tl">
+          <li><span class="d">Sep 2024</span> <span data-i18n="tl1">National Guidelines on AI Governance and Ethics (AIGE) published</span></li>
+          <li><span class="d">Dec 2024</span> <span data-i18n="tl2">National AI Office launched</span></li>
+          <li><span class="d">10–31 Jul 2026</span> <span data-i18n="tl3">Public consultation on the AI Governance Bill</span></li>
+          <li><span class="d">28 Jul 2026</span> <span data-i18n="tl4">AI Malaysia launched with the National AI Action Plan 2026–2030 and MY-AISafe</span></li>
+          <li><span class="d">2027</span> <span data-i18n="tl5">AI Governance Bill targeted for tabling in Parliament</span></li>
+        </ul></div>
+      </section>
+    </aside>
+  </div>
+  </main>
+
+  <footer class="site">
+    <span data-i18n="foot_l">Malaysia AI Safety Institute (MY-AISafe), a function of AI Malaysia Berhad under the Ministry of Digital.</span>
+    <span><span data-i18n="foot_r">Enquiries</span>: contactus@ai.gov.my · <span data-i18n="foot_u">Data updated</span> <span class="mono" id="foot-updated">–</span></span>
+  </footer>
+</div>
+
+<script src="assets/i18n.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

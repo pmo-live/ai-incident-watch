@@ -1,0 +1,100 @@
+[
+ {
+  "facts": [
+   "Goals: AI-enabled city infrastructure (traffic, utilities, public transport), data-driven decisions from city sensor data, automation (traffic, street lighting, energy), better public services (chatbots, predictive maintenance), sustainability (energy, emissions, waste), cyber resilience, and positioning Malaysia as the ASEAN AI-city hub.",
+   "Three playbooks published: Digital Avatar for City Data, Digital Twin, Smart Tree Inventory and Risk Monitoring.",
+   "Four collaborations announced 18 Sep 2025 at Smart City Expo KL: DNB + Ericsson training programme for council staff (AI, 5G, IoT); DNB + AWS national AI Cities platform (cloud, ML, analytics for real-time urban ops); DNB + MDEC + MSCA frameworks and standards for AI Cities; MDEC + Dell AI Innovation Hub climate-AI testbed in Penang heritage zone.",
+   "Support offered to local authorities: engagement, gap resolution, pre-built digital services, showcases, AI Cities network."
+  ],
+  "name": "AI Cities",
+  "order": 2,
+  "owner": "Ministry of Digital; delivered via MDEC with DNB",
+  "sources": [
+   {
+    "name": "MDEC AI Cities page",
+    "url": "https://www.mdec.my/ai-cities"
+   },
+   {
+    "name": "MDEC press release, 18 Sep 2025",
+    "url": "https://www.mdec.my/press-releases/malaysia-shapes-human-centred-ai-cities-through-four-landmark-collaborations"
+   }
+  ],
+  "status": "Active; four collaborations signed Sep 2025, national platform in development",
+  "updated_at": "2026-10-26T03:47:11Z",
+  "watch": [
+   "City-data and sensor platforms are high-value targets: watch AI-driven cyberattacks on urban infrastructure",
+   "Digital twin / avatar of citizen data must comply with PDPA and the coming AI-PDP Framework",
+   "No public dates, grant figures or named pilot cities on the MDEC page; confirm milestones with MDEC",
+   "Standards from the DNB-MDEC-MSCA MoU should align with the AI Governance Bill risk tiers"
+  ],
+  "id": "ai-cities"
+ },
+ {
+  "facts": [
+   "AI Malaysia launched 28 Jul 2026, replacing the National AI Office (NAIO, est. 12 Dec 2024). Mandate: coordinate the National AI Action Plan 2026-2030 (28 initiatives: 14 sector, 14 enablers) and develop governance frameworks, ethical standards, safety testing and red-teaming.",
+   "AI Governance Bill consultation paper issued by NAIO on 10 Jul 2026; feedback closed 31 Jul 2026. Proposes a Central AI Authority with Sectoral Leads, 3 risk tiers (Unacceptable / High / Low), Developer vs Deployer duties, 5 principles, mandatory incident reporting (near misses may be reportable) and AI sandboxes.",
+   "PDPD consultation on an AI and Personal Data Protection Framework issued 5 Oct 2026; closed 23 Oct 2026. Sets PDPA 2010 compliance duties for AI developers and deployers (lawful basis, DP by design, DPIAs, vendor oversight).",
+   "Malaysian AI Safety Institute will sit under AI Malaysia. Target: AI Nation by 2030."
+  ],
+  "name": "AI Governance",
+  "order": 1,
+  "owner": "AI Malaysia (Ministry of Digital), formerly NAIO",
+  "sources": [
+   {
+    "name": "The Edge Malaysia, 28 Jul 2026",
+    "url": "https://theedgemalaysia.com/node/812301"
+   },
+   {
+    "name": "Baker McKenzie, 13 Jul 2026 (AI Governance Bill)",
+    "url": "https://www.bakermckenzie.com/en/insight/publications/2026/07/malaysia-public-consultation-on-the-ai-governance-bill"
+   },
+   {
+    "name": "Baker McKenzie, 7 Oct 2026 (AI-PDP Framework)",
+    "url": "https://www.bakermckenzie.com/en/insight/publications/2026/10/malaysia-consultation-on-proposed-ai-and-personal-data-protection-framework"
+   }
+  ],
+  "status": "AI Governance Bill in consultation; target completion end-2026",
+  "updated_at": "2026-10-26T03:47:11Z",
+  "watch": [
+   "Final AI Governance Bill text and tabling date (target end-2026)",
+   "Incident-reporting duty: this channel can feed the future Central AI Authority process",
+   "Final PDPD AI-PDP Framework after 23 Oct 2026 consultation",
+   "EU AI Act enforcement and US state litigation as reference cases"
+  ],
+  "id": "ai-governance"
+ },
+ {
+  "facts": [
+   "MY-AISafe contributes to E12 (AI Trust Function): create an AI evaluation, assessment and response capability so Malaysia can pre-empt and manage AI risks.",
+   "E12 functions: Standards & Policy; Evaluation & Certification; Incident Monitoring & Forensics; International Collaboration & Capacity Building.",
+   "Post-release duties named in the overview: Incident management (receive, assess and contain AI incidents and near-misses, then share what was learned) and Threat intelligence (track emerging AI risks and misuse patterns, give early warning before they spread).",
+   "Three workstreams: AI RDCI (safety evals, testing, red teaming); Strategic collaboration (local and international partners, talent); AI Assurance, Standards & Evaluation (benchmarks, test protocols, assurance).",
+   "Responsible AI test areas follow AIGE 2024 principles: fairness, reliability, safety & control, privacy & security, inclusiveness, transparency, accountability, human benefit.",
+   "Timeline: AIGE Sep 2024; NAIO Dec 2024; AI Governance Bill consultation 10-31 Jul 2026; AI Malaysia + MY-AISafe 28 Jul 2026; Bill tabling targeted 2027."
+  ],
+  "goal": "E12 target: establish a rapid and reliable national capability to detect, assess and contain critical AI-related incidents. This channel is the live detect-and-early-warning layer for that target.",
+  "name": "AI Safety",
+  "order": 3,
+  "owner": "Malaysia AI Safety Institute (MY-AISafe), under AI Malaysia / Kementerian Digital",
+  "sources": [
+   {
+    "name": "MY-AISafe overview (NAIO PDF)",
+    "url": "https://strapi.naio.okie.my/uploads/Malaysia_AI_Safety_Institute_Overview_1_86540498a4.pdf"
+   },
+   {
+    "name": "The Edge Malaysia, 28 Jul 2026",
+    "url": "https://theedgemalaysia.com/node/812301"
+   }
+  ],
+  "status": "Announced 28 Jul 2026 with AI Malaysia. Delivers E12 AI Trust Function of the National AI Action Plan 2026-2030",
+  "updated_at": "2026-10-26T05:30:00Z",
+  "watch": [
+   "How this channel maps to E12: Detect = 3-hourly scanner; Assess = severity scoring (1-5 impact once the RAID link is added); Contain = status workflow New -> Acknowledged -> Monitoring -> Closed; Share learnings = Closed items with notes.",
+   "Overview gives no reporting channels, procedures, SLAs or KPIs for incident management yet: define them (e.g. acknowledge Critical within 1 scan cycle = 3 h).",
+   "Alignment with UK AISI and Singapore IMDA testing and incident practice",
+   "Deepfake and AI-scam waves targeting Malaysians",
+   "Incident-reporting duty in the AI Governance Bill will need an intake path; this dashboard's manual form is a starting point."
+  ],
+  "id": "ai-safety"
+ }
+]

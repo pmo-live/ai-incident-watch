@@ -1,0 +1,17 @@
+[
+ {
+  "alerts_fired": 1,
+  "found": 12,
+  "new_count": 12,
+  "note": "Initial seed scan run from the build session",
+  "queries": [
+   "AI safety incident this week",
+   "AI governance regulation news October 2026",
+   "Malaysia AI governance news October 2026",
+   "AI model misuse cyberattack incident report"
+  ],
+  "ran_at": "2026-10-26T03:47:11Z",
+  "status": "ok",
+  "id": "2026-10-26T03-47Z"
+ }
+]

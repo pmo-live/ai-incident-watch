@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Report an AI incident · AI Incident Watch</title>
+<meta name="description" content="Report an AI incident, near-miss or misuse pattern to the Malaysia AI Safety Institute (MY-AISafe).">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230d6e8a'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+<div class="wrap">
+  <header class="bar">
+    <div class="brand">
+      <span class="org" data-i18n="org">Malaysia AI Safety Institute (MY-AISafe) · AI Malaysia</span>
+      <a href="index.html">AI Incident Watch</a>
+    </div>
+    <nav class="main" aria-label="Main">
+      <a class="btn ghost" href="index.html" data-i18n="r_back">Back to dashboard</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="ms" aria-pressed="false">BM</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="form-wrap">
+    <div class="eyebrow" data-i18n="eyebrow">E12 AI Trust Function · Incident Monitoring &amp; Forensics</div>
+    <h1 data-i18n="r_h">Report an AI incident</h1>
+    <p class="sub" data-i18n="r_sub">Use this form to report an AI system that caused harm, behaved unsafely, or nearly did. Reports are received by MY-AISafe and enter the Receive → Assess → Contain → Share pipeline.</p>
+    <p class="notice" data-i18n="r_notice">For emergencies that endanger life, call 999. For online scams, call the National Scam Response Centre (NSRC) at 997. This form is not an emergency line.</p>
+
+    <form class="report" name="incident-report" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field" id="report">
+      <input type="hidden" name="form-name" value="incident-report">
+      <input type="hidden" name="language" id="f-language" value="en">
+      <p hidden><label>Do not fill this field: <input name="bot-field"></label></p>
+
+      <fieldset>
+        <legend data-i18n="r_what">What happened</legend>
+        <label><span><span data-i18n="r_type">Report type</span> <span class="req" aria-hidden="true">*</span></span>
+          <select name="report_type" required>
+            <option value="incident" data-i18n="r_t_inc">Incident (harm occurred)</option>
+            <option value="near-miss" data-i18n="r_t_near">Near-miss (harm was avoided)</option>
+            <option value="threat" data-i18n="r_t_thr">Threat or misuse pattern</option>
+          </select></label>
+        <label><span><span data-i18n="r_title">Short title</span> <span class="req" aria-hidden="true">*</span></span><input name="title" required maxlength="200" autocomplete="off"></label>
+        <label><span><span data-i18n="r_desc">Describe what happened</span> <span class="req" aria-hidden="true">*</span></span>
+          <span class="hint" data-i18n="r_desc_h">What the AI system did, who was affected, and how it was noticed.</span>
+          <textarea name="description" required maxlength="4000"></textarea></label>
+        <div class="two">
+          <label><span data-i18n="r_date">Date of event</span><input name="event_date" type="date"></label>
+          <label><span data-i18n="r_state">State / location</span>
+            <select name="location">
+              <option value="">—</option>
+              <option>Johor</option><option>Kedah</option><option>Kelantan</option><option>Melaka</option><option>Negeri Sembilan</option><option>Pahang</option><option>Perak</option><option>Perlis</option><option>Pulau Pinang</option><option>Sabah</option><option>Sarawak</option><option>Selangor</option><option>Terengganu</option><option>WP Kuala Lumpur</option><option>WP Labuan</option><option>WP Putrajaya</option><option>Outside Malaysia</option><option>Online / unknown</option>
+            </select></label>
+        </div>
+        <label><span data-i18n="r_system">AI system involved</span><span class="hint" data-i18n="r_system_h">Product, model or service name if known</span><input name="ai_system" maxlength="200"></label>
+        <fieldset style="border:0;padding:0">
+          <legend style="font-weight:500;font-size:13px;padding:0" data-i18n="r_harm">Harm or risk</legend>
+          <span class="hint" data-i18n="r_harm_h">Select all that apply</span>
+          <div class="two" style="margin-top:6px">
+            <label class="check"><input type="checkbox" name="harm" value="physical safety"><span data-i18n="h_safety">Physical safety</span></label>
+            <label class="check"><input type="checkbox" name="harm" value="privacy or personal data"><span data-i18n="h_privacy">Privacy or personal data</span></label>
+            <label class="check"><input type="checkbox" name="harm" value="financial loss or scam"><span data-i18n="h_finance">Financial loss or scam</span></label>
+            <label class="check"><input type="checkbox" name="harm" value="discrimination or bias"><span data-i18n="h_fair">Discrimination or bias</span></label>
+            <label class="check"><input type="checkbox" name="harm" value="false information or deepfake"><span data-i18n="h_info">False information or deepfake</span></label>
+            <label class="check"><input type="checkbox" name="harm" value="cybersecurity"><span data-i18n="h_security">Cybersecurity</span></label>
+            <label class="check"><input type="checkbox" name="harm" value="other"><span data-i18n="h_other">Other</span></label>
+          </div>
+        </fieldset>
+        <label><span data-i18n="r_sev">Severity you suggest</span><span class="hint" data-i18n="r_sev_h">Officers confirm the final level</span>
+          <select name="suggested_severity"><option>High</option><option>Critical</option><option>Medium</option><option>Low</option></select></label>
+      </fieldset>
+
+      <fieldset>
+        <legend data-i18n="r_who">About you</legend>
+        <label><span><span data-i18n="r_role">You are reporting as</span> <span class="req" aria-hidden="true">*</span></span>
+          <select name="reporter_role" required>
+            <option value="developer" data-i18n="role_dev">Developer</option>
+            <option value="deployer" data-i18n="role_dep">Deployer / organisation using the system</option>
+            <option value="government" data-i18n="role_gov">Government agency or regulator</option>
+            <option value="researcher" data-i18n="role_res">Researcher</option>
+            <option value="public" selected data-i18n="role_pub">Member of the public</option>
+            <option value="media" data-i18n="role_media">Media</option>
+          </select></label>
+        <div class="two">
+          <label><span data-i18n="r_org">Organisation (optional)</span><input name="organisation" maxlength="200"></label>
+          <label><span data-i18n="r_email">Email for follow-up (optional)</span><span class="hint" data-i18n="r_email_h">Used only by MY-AISafe officers to contact you about this report.</span><input name="email" type="email" maxlength="200"></label>
+        </div>
+        <label><span data-i18n="r_link">Evidence link (optional)</span><input name="evidence_url" type="url" placeholder="https://" maxlength="500"></label>
+        <label class="check"><input type="checkbox" name="consent" value="yes" required><span data-i18n="r_consent">I understand this report will be assessed by MY-AISafe and an anonymised summary may be published on the public channel.</span></label>
+      </fieldset>
+
+      <div><button type="submit" class="btn primary" data-i18n="r_submit">Submit report</button></div>
+    </form>
+  </main>
+
+  <footer class="site">
+    <span data-i18n="foot_l">Malaysia AI Safety Institute (MY-AISafe), a function of AI Malaysia Berhad under the Ministry of Digital.</span>
+    <span><span data-i18n="foot_r">Enquiries</span>: contactus@ai.gov.my</span>
+  </footer>
+</div>
+<script src="assets/i18n.js"></script>
+<script>
+(function(){
+  let lang="en";try{lang=localStorage.getItem("aiw-lang")||"en"}catch(e){}
+  const D=window.AIW_I18N||{};const ms=Object.assign({},D.ms||{},D.ms_report||{});
+  function apply(){
+    document.documentElement.lang=lang==="ms"?"ms":"en";
+    document.getElementById("f-language").value=lang;
+    document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.dataset.i18n;if(!el.dataset.en)el.dataset.en=el.innerHTML;el.innerHTML=lang==="ms"&&ms[k]?ms[k]:el.dataset.en});
+    document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===lang?"true":"false"));
+  }
+  document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.lang;try{localStorage.setItem("aiw-lang",lang)}catch(e){}apply()}));
+  apply();
+  const f=document.getElementById("report");
+  f.addEventListener("submit",()=>{const b=f.querySelector("button[type=submit]");b.disabled=true;b.textContent=lang==="ms"?"Menghantar…":"Submitting…"});
+})();
+</script>
+</body>
+</html>
